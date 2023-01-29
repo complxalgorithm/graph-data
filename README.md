@@ -1,6 +1,7 @@
 # graph_data
 Command line program that collects precipitation data from user, then graphs the data.
-This is a work-in-progress. I created this program so that I could learn the Plotly library. More features will be added as time goes on.
+
+This is a work-in-progress. I created this program so that I could learn the Plotly library. More features will be added as time goes on. My main focus is generalizing the program so that non-precipitation data can be collected and graphed.
 
 # Feature
 - Asks user how many months for which they have precipitation data, and then prompts user to enter data (in inches) for each month.
