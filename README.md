@@ -1,5 +1,6 @@
 # graph_data
 Command line program that collects precipitation data from user, then graphs the data.
+This is a work-in-progress. I created this program so that I could learn the Plotly library. More features will be added as time goes on.
 
 # Feature
 - Asks user how many months for which they have precipitation data, and then prompts user to enter data (in inches) for each month.
@@ -36,6 +37,9 @@ python3 graph_data.py
 - [ ] Give user option to display graph as .png, .jpeg, .svg, or .pdf
 - [ ] Allow user to use data from .csv or .xls files
 - [ ] Allow user to use data that is stored in external databases (e.g. MySQL, PostgreSQL)
+
+# Contributing
+Contributions are more than welcome. Simply make a pull request for my review. If there are any issues with or suggestions for the program that you may have, create an issue for my review.
 
 # Copyright
 &copy; 2023 [Stephen C. Sanders](https://stephensanders.me). Licensed under the <a href="https://github.com/complxalgorithm/graph_data/blob/master/LICENSE">MIT License</a>.
