@@ -27,6 +27,7 @@ python3 graph_data.py
 ```
 
 # To-Do
+- [ ] Speed up run time so there isn't a large delay after first executing program
 - [ ] Generalize program so non-precipitation data can be graphed
 - [ ] Hide 0.5 intervals on y-axis
 - [ ] Prompt user whether they want to use inches or cms (or other units such as ft or m)
