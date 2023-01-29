@@ -42,5 +42,7 @@ python3 graph_data.py
 # Contributing
 Contributions are more than welcome. Simply make a pull request for my review. If there are any issues with or suggestions for the program that you may have, create an issue for my review.
 
+I should specify again, though, that I created this program as a way to learn the Plotly library. As such, I would prefer completing the to-do list on my own. However, if you would like to check off anything that is on the to-do list (or add any features that are not on the to-do list), I request that you make helpful comments so that I understand what you did and can learn from it.
+
 # Copyright
 &copy; 2023 [Stephen C. Sanders](https://stephensanders.me). Licensed under the <a href="https://github.com/complxalgorithm/graph_data/blob/master/LICENSE">MIT License</a>.
