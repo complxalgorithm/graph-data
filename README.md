@@ -32,13 +32,14 @@ python3 graph_data.py
 - [ ] Hide 0.5 intervals on y-axis
 - [ ] Prompt user whether they want to use inches or cms (or other units such as ft or m)
 - [ ] Ask user if the data is correct, and allow them to change the values of the months and precipitation
-- [ ] Give user option to add trendline to generated graph (and make it a different color)
-- [ ] Give user option to name the graph
+- [X] Give user option to add trendline to generated graph (and make it a different color)
+- [X] Give user option to name the graph
 - [ ] Give user option to customize axes labels
 - [ ] Give user option to save graph from command line into any directory
 - [ ] Give user option to display graph as .png, .jpeg, .svg, or .pdf
 - [ ] Allow user to use data from .csv or .xls files
 - [ ] Allow user to use data that is stored in external databases (e.g. MySQL, PostgreSQL)
+- [ ] Allow the generation of multivariate graphs
 
 # Contributing
 Contributions are more than welcome. Simply make a pull request for my review. If there are any issues with or suggestions for the program that you may have, create an issue for my review.

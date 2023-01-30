@@ -9,13 +9,12 @@
 # 2. Hide 0.5 intervals on y-axis
 # 3. Prompt user whether they want to use inches or cms (or other units such as ft or m)
 # 4. Ask user if the data is correct, and allow them to change the values of the months and precipitation
-# 5. Give user option to add trendline to generated graph (and make it a different color)
-# 6. Give user option to name the graph
-# 7. Give user option to customize axes labels
-# 8. Give user option to save graph from command line into any directory
-# 9. Give user option to display graph as .png, .jpeg, .svg, or .pdf
-# 10. Allow user to use data from .csv or .xls files
-# 11. Allow user to use data that is stored in external databases (e.g. MySQL, PostgreSQL)
+# 5. Give user option to customize axes labels
+# 6. Give user option to display graph as .png, .jpeg, .svg, or .pdf
+# 7. Give user option to save graph from command line into any directory as .png, .jpeg, .svg, or .pdf
+# 8. Allow user to use data from .csv or .xls files
+# 9. Allow user to use data that is stored in external databases (e.g. MySQL, PostgreSQL)
+# 10. Allow the generation of multivariate graphs
 
 # Import libraries
 import pandas as pd                 # Pandas library - Used for graphing data
@@ -65,14 +64,14 @@ def main():
     # Create and output graph
     if (ifGraph == 'Y') or (ifGraph == 'y'):
         # Allow user to choose a line graph, bar graph, or scatter plot
-        graphOption = get_graph_choice()
+        graphOption, ifTrendline = get_graph_choice()
         
         # Extract months and precipitation data from precipitation dictionary and separate into
         # individual lists
         months_list, precip_list = separate_data(precipitation)
         
         # Generate a graph, and open it in default browser
-        generate_graph(months_list, precip_list, graphOption)
+        generate_graph(months_list, precip_list, graphOption, ifTrendline)
         
         # Pause program for half a second
         time.sleep(0.5)
@@ -156,15 +155,22 @@ def get_graph_choice():
     # Validate that user selected one of the options, and ask until they enter valid option
     while (choice.upper() != 'B') and (choice.upper() != 'L') and (choice.upper() != 'S'):
         print (f'ERROR: {choice} is not an option. Please try again.')
-        choice = input('Would you like a bar graph (b), line graph (l), or scatter plot (s)? ')
+        choice = input('Would you like a bar graph (b), line graph (l), or scatter plot (s)? ') 
     
-    # Return option to main() function
+    # Return choice and ifTrendline values to main() function
     if choice.upper() == 'B':
-        return 1                    # Bar graph
+        return 1, ''                       # Bar graph, no trendline
     elif choice.upper() == 'L':
-        return 2                    # Line graph
+        return 2, ''                       # Line graph, no trendline
     else:
-        return 3                    # Scatter plot
+        # Ask user if they want a trendline on their scatter plot
+        trendline = input('Would you like to add a trendline to your scatterplot? (Y or N): ')
+        
+        # Return with trendline choice
+        if trendline.upper() == 'Y':
+            return 3, 'Y'                  # Scatter plot, with trendline option
+        else:
+            return 3, 'N'
 
 # separate_data() function - splits months and precipitation data into 2 separate lists
 # in order to use them as axes in the generated graph
@@ -182,7 +188,34 @@ def separate_data(data):
     return months, precip
 
 # generate_graph() function - creates graph then displays it in default browser
-def generate_graph(months, precip, opt):
+def generate_graph(months, precip, graph, trend):
+    # Create graph_title variable and set it to title
+    graph_title = input('Enter a name for your graph: ')
+    
+    # Initialize variables used to validate and end below while loop
+    correct = 'N'
+    cont = False
+    
+    # Check to make sure user entered the correct title
+    ifTitle = input(f'Is your input of - ' + graph_title + ' - correct? (Y or N): ')
+    
+    # Validate user gave valid answer, and prompt accordingly
+    while cont == False:
+        try:
+            # Test that ifTitle is a valid answer
+            (ifTitle.upper() == 'Y') or (ifTitle.upper() == 'N')
+        except:
+            # If ifTitle is not valid, tell user and let them answer again until it's valid
+            print(f'ERROR: {ifTitle} is not a valid answer. Please try again.')
+            ifTitle = input(f'Is your input of - ' + graph_title + ' - correct? (Y or N): ')
+        else:
+            if ifTitle.upper() == 'N':    # If original title is not correct
+                # Ask user to enter the new name for the graph
+                graph_title = input('Enter the new name for your graph: ')
+            
+            # End while loop
+            cont = True
+    
     # Print that the program is generating a graph
     print('Generating your graph....')
     
@@ -190,15 +223,20 @@ def generate_graph(months, precip, opt):
     df = pd.DataFrame(dict(Month=months, Precipitation=precip))
     
     # Generate graph based on value of opt
-    if opt == 1:            # Bar graph
+    if graph == 1:            # Bar graph
         # Create a bar graph
-        fig = px.bar(df, x=df.Month, y=df.Precipitation, title="Precipitation Data")
-    elif opt == 2:          # Line graph
+        fig = px.bar(df, x=df.Month, y=df.Precipitation, title=graph_title)
+    elif graph == 2:          # Line graph
         # Create a line graph
-        fig = px.line(df, x=df.Month, y=df.Precipitation, title="Precipitation Data")
-    else:                   # Scatter plot
-        # Create a scatter plot
-        fig = px.scatter(df, x=df.Month, y=df.Precipitation, title="Precipitation Data")
+        fig = px.line(df, x=df.Month, y=df.Precipitation, title=graph_title)
+    else:                     # Scatter plot
+        if trend == 'Y':
+            # Create a scatter plot with red trendline
+            fig = px.scatter(df, x=df.Month, y=df.Precipitation, title=graph_title, 
+                            trendline='ols', trendline_color_override="red")
+        else:
+            # Create a scatter plot without trendline
+            fig = px.scatter(df, x=df.Month, y=df.Precipitation, title=graph_title)
     
     # Set x-axis intervals to 1, and y-axis intervals to 0.5
     fig.update_xaxes(tick0=0, dtick=1, showline=True, linewidth=1, linecolor='black')
