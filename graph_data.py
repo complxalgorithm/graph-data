@@ -2,20 +2,7 @@
 # Author: Stephen C. Sanders <https://stephensanders.me>
 # Description: Allows user to enter precipitation data for a specified number of months, and then gives
 # the user the option to generate a bar graph, line graph, or scatter plot using the data.
-# Requirements: Python3, Pandas, Plotly
-
-# <-- TODO -- >
-# 1. Generalize program so non-precipitation data can be graphed
-# 2. Hide 0.5 intervals on y-axis
-# 3. Allow user to change color of trendline
-# 4. Prompt user whether they want to use inches or cms (or other units such as ft or m)
-# 5. Ask user if the data is correct, and allow them to change the values of the months and precipitation
-# 6. Give user option to customize axes labels
-# 7. Give user option to display graph as .png, .jpeg, .svg, or .pdf
-# 8. Give user option to save graph from command line into any directory as .png, .jpeg, .svg, or .pdf
-# 9. Allow user to use data from .csv or .xls files
-# 10. Allow user to use data that is stored in external databases (e.g. MySQL, PostgreSQL)
-# 11. Allow the generation of multivariate graphs
+# Requirements: Python3, Pandas, Plotly, Kaleido
 
 # Import libraries
 import pandas as pd                 # Pandas library - Used for graphing data
