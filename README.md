@@ -13,7 +13,6 @@ This is a work-in-progress. I created this program so that I could learn the Plo
 1. Python 3 - download the latest version [here](https://www.python.org/downloads/).
 2. Pandas - learn how to install the Pandas library [here](https://pandas.pydata.org/docs/getting_started/install.html).
 3. Plotly - learn how to install the Plotly library [here](https://plotly.com/python/getting-started/#installation).
-4. Kaleido - learn how to install the Kaleido library [here](https://github.com/plotly/Kaleido).
 
 # How to Use
 To download the program, you can either clone the repo on your command line
