@@ -27,13 +27,13 @@ def main():
     # Get from user how many months of data they want to enter
     months = get_months()
     
-    # Collect rainfall data
+    # Collect precipitation data
     precipitation = get_precipitation_data(precip, validate, months, mon)
     
-    # Calculate total rainfall over specified period of time
+    # Calculate total precipitation over specified period of time
     precip_sum = calc_total_precipitation(precipitation, total)
     
-    # Calculate average monthly rainfall
+    # Calculate average monthly precipitation
     precip_avg = calc_avg_precipitation(precip_sum, months)
     
     # Pause program for 1/4 of a second
@@ -92,7 +92,7 @@ def get_precipitation_data(precip, valid, ms, m):
         while valid == False:
             try:
                 # Ask for month's data
-                precip[m] = float(input(f"Enter rainfall in inches for month #" + str(m) + ": "))
+                precip[m] = float(input(f"Enter precipitation in inches for month #" + str(m) + ": "))
             except ValueError:
                 print(f'ERROR: your input is not numeric. Please try again')
                 time.sleep(0.25)    # Pause program for 1/4 of a second
@@ -110,7 +110,7 @@ def get_precipitation_data(precip, valid, ms, m):
 
 # calc_total_precipitation() function - calculates total precipitation
 def calc_total_precipitation(precip, tot):
-    # Add up total of rainfall
+    # Add up total of precipitation
     for key, val in precip.items():
         val = float(val)
         tot+= val
