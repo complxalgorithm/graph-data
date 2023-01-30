@@ -7,6 +7,8 @@ This is a work-in-progress. I created this program so that I could learn the Plo
 - Asks user how many months for which they have precipitation data, and then prompts user to enter data (in inches) for each month.
 - Asks user whether they want to generate a graph of the data.
 - If the user wants to generate a graph, they will be asked whether they want a bar graph, line graph, or a scatter plot.
+- Gives an option to add a trendline on scatter plots.
+- Allows user to rename the title of their graph (in case they typed it incorrectly the first time).
 - A graph will then be generated using the data, and then the graph will open in the user's default browser.
 
 # Requirements
