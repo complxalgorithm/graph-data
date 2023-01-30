@@ -2,7 +2,7 @@
 # Author: Stephen C. Sanders <https://stephensanders.me>
 # Description: Allows user to enter precipitation data for a specified number of months, and then gives
 # the user the option to generate a bar graph, line graph, or scatter plot using the data.
-# Requirements: Python3, Pandas, Plotly
+# Requirements: Python3, Pandas, Plotly, Kaleido
 
 # Import libraries
 import pandas as pd                 # Pandas library - Used for graphing data
@@ -84,7 +84,7 @@ def get_months():
     # Return valid input to main() function
     return num
 
-# get_rainfall_data() function - collects data from user
+# get_precipitation_data() function - collects data from user
 def get_precipitation_data(precip, valid, ms, m):
     # Let user enter data for each month, store data in precipitation dict
     while m <= ms:
@@ -108,7 +108,7 @@ def get_precipitation_data(precip, valid, ms, m):
     # Return data dict to main() function
     return precip
 
-# calc_total_precipitation() function - calculates total rainfall
+# calc_total_precipitation() function - calculates total precipitation
 def calc_total_precipitation(precip, tot):
     # Add up total of rainfall
     for key, val in precip.items():
