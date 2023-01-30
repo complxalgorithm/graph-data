@@ -86,7 +86,7 @@ def get_months():
 
 # get_rainfall_data() function - collects data from user
 def get_precipitation_data(precip, valid, ms, m):
-    # Let user enter data for each month, store data in rainfall dict
+    # Let user enter data for each month, store data in precipitation dict
     while m <= ms:
         # Enter data while validating that the data is numeric
         while valid == False:
@@ -118,7 +118,7 @@ def calc_total_precipitation(precip, tot):
     # Return total to main() function
     return tot
 
-# calc_avg_rainfall() function - calculates average monthly rainfall
+# calc_avg_precipitation() function - calculates average monthly precipitation
 def calc_avg_precipitation(total, ms):
     return (total / ms)
 
