@@ -32,7 +32,8 @@ python3 graph_data.py
 - [ ] Hide 0.5 intervals on y-axis
 - [ ] Prompt user whether they want to use inches or cms (or other units such as ft or m)
 - [ ] Ask user if the data is correct, and allow them to change the values of the months and precipitation
-- [X] Give user option to add trendline to generated graph (and make it a different color)
+- [X] Give user option to add trendline to generated graph
+- [ ] Allow user to change color of trendline
 - [X] Give user option to name the graph
 - [ ] Give user option to customize axes labels
 - [ ] Give user option to save graph from command line into any directory
