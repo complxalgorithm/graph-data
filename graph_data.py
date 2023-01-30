@@ -223,7 +223,7 @@ def generate_graph(months, precip, graph, trend):
     # Create DataFrame object using months data and precipitation data
     df = pd.DataFrame(dict(Month=months, Precipitation=precip))
     
-    # Generate graph based on value of opt
+    # Generate graph based on value of graphOption
     if graph == 1:            # Bar graph
         # Create a bar graph
         fig = px.bar(df, x=df.Month, y=df.Precipitation, title=graph_title)
