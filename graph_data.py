@@ -2,7 +2,7 @@
 # Author: Stephen C. Sanders <https://stephensanders.me>
 # Description: Allows user to enter precipitation data for a specified number of months, and then gives
 # the user the option to generate a bar graph, line graph, or scatter plot using the data.
-# Requirements: Python3, Pandas, Plotly, Kaleido
+# Requirements: Python3, Pandas, Plotly
 
 # Import libraries
 import pandas as pd                 # Pandas library - Used for graphing data
