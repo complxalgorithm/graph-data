@@ -33,7 +33,7 @@ python3 graph_data.py
 - [ ] Generalize program so non-precipitation data can be graphed
 - [ ] Hide 0.5 intervals on y-axis
 - [ ] Prompt user whether they want to use inches or cms (or other units such as ft or m)
-- [ ] Ask user if the data is correct, and allow them to change the values of the months and precipitation
+- [ ] Ask user if the data is correct, and allow them to change data values
 - [X] Give user option to add trendline to generated graph
 - [ ] Allow user to change color of trendline
 - [X] Give user option to name the graph
