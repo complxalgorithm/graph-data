@@ -1,4 +1,4 @@
-# graph_data
+# graph-data
 Command line program that collects precipitation data from user, then graphs the data.
 
 This is a work-in-progress. I created this program so that I could learn the Plotly library. More features will be added as time goes on. My main focus is generalizing the program so that non-precipitation data can be collected and graphed.
@@ -20,18 +20,18 @@ This is a work-in-progress. I created this program so that I could learn the Plo
 # How to Use
 To download the program, you can either clone the repo on your command line
 ```
-git clone https://github.com/complxalgorithm/graph_data.git
+git clone https://github.com/complxalgorithm/graph-data.git
 ```
-or download here: https://github.com/complxalgorithm/graph_data/archive/refs/heads/master.zip
+or download here: https://github.com/complxalgorithm/graph-data/archive/refs/heads/master.zip
 
 To execute, cd into the graph_data directory, and then enter
 ```
-python3 graph_data.py
+python3 graph-data.py
 ```
 
 # To-Do
 - [ ] Speed up run time so there isn't a large delay after first executing program
-- [ ] Modulize the script so it isn't all on one long script file
+- [X] Modulize the script so it isn't all on one long script file
 - [ ] Generalize program so non-precipitation data can be graphed
 - [ ] Hide 0.5 intervals on y-axis
 - [ ] Prompt user whether they want to use inches or cms (or other units such as ft or m)
