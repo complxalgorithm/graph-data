@@ -1,5 +1,7 @@
 .gitignore
 graph_data_backup.py
 install.py
-func_test.py
+test.py
+csv-test.py
+csvtest.csv
 src/__pycache__

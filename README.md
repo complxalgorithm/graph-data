@@ -33,17 +33,19 @@ python3 graph-data.py
 - [X] Modulize the script so it isn't all on one long script file
 - [ ] Generalize program so non-precipitation data can be graphed
 - [ ] Hide 0.5 intervals on y-axis
-- [ ] Prompt user whether they want to use inches or cms (or other units such as ft or m)
+- [X] Allow user to choose temporal unit (hour, day, week, month, year)
+- [ ] Prompt user whether they want to use inches or cms (or other units such as ft, m, lbs, kgs, etc.)
 - [ ] Ask user if the data is correct, and allow them to change data values
 - [X] Give user option to add trendline to generated graph
 - [ ] Allow user to change color of trendline
 - [X] Give user option to name the graph
 - [ ] Give user option to customize axes labels
+- [ ] Give user option to customize graph font, size, and/or color
 - [ ] Give user option to save graph from command line into any directory
 - [ ] Give user option to display graph as .png, .jpeg, .svg, or .pdf
-- [ ] Allow user to use data from .csv or .xls files
-- [ ] Allow user to use data that is stored in external databases (e.g. MySQL, PostgreSQL)
-- [ ] Allow the generation of multivariate graphs
+- [ ] Add support for data from .csv or .xls files
+- [ ] Add support for data that is stored in external databases (e.g. MySQL, PostgreSQL)
+- [ ] Add support for the generation of multivariate graphs
 
 # Contributing
 Contributions are more than welcome. Simply make a pull request for my review. If there are any issues with or suggestions for the program that you may have, create an issue for my review.

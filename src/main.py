@@ -18,29 +18,28 @@ def m():
     time.sleep(1)
     
     # Initialize variables
-    precip = {}          # Initialize dictionary to store data
-    mon = 1              # Initialize variable used to run while loop - starts at 1 to signify 1st month
-    total = 0            # Initialize total variable
-    validate = False     # Initialize validation variable to use for validating numeric precipitation data
+    data_dict = {}          # Initialize dictionary to store data
+    validate = False        # Initialize validation variable to use for validating numeric precipitation data
+    time_units = ['hour', 'day', 'week', 'month', 'year']
     
-    # Get from user how many months of data they want to enter
-    months = data.months()
+    # Get from user how temporal units and how many of that unit they have data for
+    time_type, time_num = data.temporal(time_units)
     
-    # Collect precipitation data
-    precipitation = data.d(precip, validate, months, mon)
+    # Collect data
+    dat = data.d(data_dict, validate, time_type, time_num)
     
     # Calculate total precipitation over specified period of time
-    precip_sum = stats.total(precipitation, total)
+    data_sum = stats.total(dat)
     
     # Calculate average monthly precipitation
-    precip_avg = stats.avg(precip_sum, months)
+    data_avg = stats.avg(data_sum, time_num)
     
     # Pause program for 1/4 of a second
     time.sleep(0.25)
     
     # Output stats
-    print(f'{precip_sum:.3f} inches of precipitation fell over the course of {months} months.')
-    print(f'There was an average of {precip_avg:.3f} inches of precipitation per month.')
+    print(f'{data_sum:.3f} inches of precipitation fell over the course of {time_num} {time_type}s.')
+    print(f'There was an average of {data_avg:.3f} inches of precipitation per month.')
     
     # Pause program for 1 second
     time.sleep(1)
@@ -49,16 +48,16 @@ def m():
     ifGraph = graph.status()
     
     # Create and output graph
-    if (ifGraph == 'Y') or (ifGraph == 'y'):
+    if ifGraph.upper() == 'Y':
         # Allow user to choose a line graph, bar graph, or scatter plot
         graphOption, ifTrendline = graph.choice()
         
         # Extract months and precipitation data from precipitation dictionary and separate into
         # individual lists
-        months_list, precip_list = data.separate(precipitation)
+        time_list, data_list = data.separate(dat)
         
         # Generate a graph, and open it in default browser
-        graph.generate(months_list, precip_list, graphOption, ifTrendline)
+        graph.generate(time_list, data_list, graphOption, ifTrendline, time_type)
     
     # Pause program for half a second
     time.sleep(0.5)
