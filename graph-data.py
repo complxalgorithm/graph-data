@@ -3,7 +3,7 @@
 # License: MIT
 # Description: Allows user to enter precipitation data for a specified number of months, and then gives
 # the user the option to generate a bar graph, line graph, or scatter plot using the data.
-# Requirements: Python3, Pandas, Plotly, Kaleido
+# Requirements: Python3, Pandas, Plotly
 
 # Import libraries needed to import modules from src directory
 import os
@@ -22,4 +22,4 @@ import main
 
 # Execute main function
 if __name__ == "__main__":
-    main.main()
+    main.m()

@@ -1,11 +1,16 @@
-# Import modules
-import time         # Used to pause program for short intervals
-import data         # To collect precipitation data with using number of months
-import stats        # For precipitation sum and average
-import graph        # To see if user wants to graph the data or not
+# Name: main.py
+# Author: Stephen C. Sanders <https://stephensanders.me>
+# License: MIT
+# Description: Controls the flow of the entire program
 
-# main() function - manages flow of entire program
-def main():
+# Import modules
+import data         # To collect precipitation data with using number of months
+import stats        # For precipitation total and average
+import graph        # To see if user wants to graph the data or not
+import time         # Used to pause program for short intervals
+
+# m() function - executes program
+def m():
     # Display welcoming messages, then pause program for a second
     print('Welcome to the Graph Data program!')
     print('This program will allow you to enter data for a specified number of months.')
@@ -19,16 +24,16 @@ def main():
     validate = False     # Initialize validation variable to use for validating numeric precipitation data
     
     # Get from user how many months of data they want to enter
-    months = data.get_months()
+    months = data.months()
     
     # Collect precipitation data
-    precipitation = data.get_data(precip, validate, months, mon)
+    precipitation = data.d(precip, validate, months, mon)
     
     # Calculate total precipitation over specified period of time
-    precip_sum = stats.total_precipitation(precipitation, total)
+    precip_sum = stats.total(precipitation, total)
     
     # Calculate average monthly precipitation
-    precip_avg = stats.avg_precipitation(precip_sum, months)
+    precip_avg = stats.avg(precip_sum, months)
     
     # Pause program for 1/4 of a second
     time.sleep(0.25)
@@ -41,12 +46,12 @@ def main():
     time.sleep(1)
     
     # Ask user if they want to generate a graph using the data
-    ifGraph = graph.graph_status()
+    ifGraph = graph.status()
     
     # Create and output graph
     if (ifGraph == 'Y') or (ifGraph == 'y'):
         # Allow user to choose a line graph, bar graph, or scatter plot
-        graphOption, ifTrendline = graph.graph_choice()
+        graphOption, ifTrendline = graph.choice()
         
         # Extract months and precipitation data from precipitation dictionary and separate into
         # individual lists

@@ -1,5 +1,10 @@
-# total_precipitation() function - calculates total precipitation
-def total_precipitation(precip, tot):
+# Name: stats.py
+# Author: Stephen C. Sanders <https://stephensanders.me>
+# License: MIT
+# Description: Includes stats related functions: total() and avg()
+
+# total() function - calculates total precipitation
+def total(precip, tot):
     # Add up total of precipitation
     for key, val in precip.items():
         val = float(val)
@@ -8,6 +13,6 @@ def total_precipitation(precip, tot):
     # Return total to main() function
     return tot
 
-# avg_precipitation() function - calculates average monthly precipitation
-def avg_precipitation(total, ms):
+# avg() function - calculates average monthly precipitation
+def avg(total, ms):
     return (total / ms)

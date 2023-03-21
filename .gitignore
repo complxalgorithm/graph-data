@@ -1,3 +1,4 @@
+.gitignore
 graph_data_backup.py
 install.py
 func_test.py

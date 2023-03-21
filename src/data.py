@@ -1,7 +1,12 @@
+# Name: data.py
+# Author: Stephen C. Sanders <https://stephensanders.me>
+# License: MIT
+# Description: Includes data related functions: months(), d(), and separate()
+
 import time  # Used to pause program for short intervals
 
-# get_months() function - user inputs how many months of data they have
-def get_months():
+# months() function - user inputs how many months of data they have
+def months():
     # Ask user how many months for which they want to enter data
     num = input(f"How many months do you have data for? ")
     
@@ -17,8 +22,8 @@ def get_months():
     # Return valid input to main() function
     return num
 
-# get_data() function - collects data from user
-def get_data(precip, valid, ms, m):
+# d() function - collects data from user
+def d(precip, valid, ms, m):
     # Let user enter data for each month, store data in precipitation dict
     while m <= ms:
         # Enter data while validating that the data is numeric

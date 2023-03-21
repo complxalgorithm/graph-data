@@ -1,9 +1,15 @@
+# Name: graph.py
+# Author: Stephen C. Sanders <https://stephensanders.me>
+# License: MIT
+# Description: Includes graphing related functions: status(), choice(), and generate()
+
 # Import graphing libraries
 import pandas as pd                 # Pandas library - Used for graphing data
 import plotly.express as px         # Plotly (Express) library - Used for graphing data
+#import kaleido                     # Will be used to download graph as png or other file
 
-# graph_status() function - asks user whether they want to graph their data
-def graph_status():
+# status() function - asks user whether they want to graph their data
+def status():
     # Ask user if they want to generate a graph
     inp = input("Would you like to generate a graph with your data? (Y or N): ")
     
@@ -15,8 +21,8 @@ def graph_status():
     # Return valid answer to main() function
     return inp
 
-# graph_choice() function - user chooses which graph they would like to generate
-def graph_choice():
+# choice() function - user chooses which graph they would like to generate
+def choice():
     # Ask user which graph they want
     choice = input('Would you like a bar graph (b), line graph (l), or scatter plot (s)? ')
     
