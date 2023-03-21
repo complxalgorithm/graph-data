@@ -13,7 +13,7 @@ import time         # Used to pause program for short intervals
 def m():
     # Display welcoming messages, then pause program for a second
     print('Welcome to the Graph Data program!')
-    print('This program will allow you to enter data for a specified number of months.')
+    print('This program will allow you to enter data for a specified number of temporal units.')
     print('You will then have the option to generate a bar graph, line graph, or scatter plot with the data.')
     time.sleep(1)
     
