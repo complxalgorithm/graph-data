@@ -5,11 +5,10 @@
 # the user the option to generate a bar graph, line graph, or scatter plot using the data.
 # Requirements: Python3, Pandas, Plotly
 
-# Import libraries needed to import modules from src directory
+# Import libraries needed to point to src directory
 import os
 import sys
 import inspect
-import time
 
 # Determine current path
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
