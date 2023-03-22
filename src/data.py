@@ -9,10 +9,11 @@ import time  # Used to pause program for short intervals
 def temporal(t):
     # Show user temporal unit options
     print('The available temporal units are: ')
-    time.sleep(0.25)        # Pause program for 1/4 of a second
+    time.sleep(0.5)        # Pause program for 1/2 of a second
     for i in t:
         print(i)
-        time.sleep(0.25)        # Pause program for 1/4 of a second
+        time.sleep(0.5)    # Pause program for 1/2 of a second
+    print('\n')            # Blank line so program output looks less clunky 
     
     # Ask user what temporal units they would like to use
     unit = input('Which temporal unit would you like to use? ')

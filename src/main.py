@@ -15,7 +15,8 @@ def m():
     print('Welcome to the Graph Data program!')
     print('This program will allow you to enter data for a specified number of temporal units.')
     print('You will then have the option to generate a bar graph, line graph, or scatter plot with the data.')
-    time.sleep(1)
+    print('\n')             # Blank line so program output looks less clunky
+    time.sleep(1.5)
     
     # Initialize variables
     data_dict = {}          # Initialize dictionary to store data
@@ -39,7 +40,8 @@ def m():
     
     # Output stats
     print(f'{data_sum:.3f} inches of precipitation fell over the course of {time_num} {time_type}s.')
-    print(f'There was an average of {data_avg:.3f} inches of precipitation per month.')
+    print(f'There was an average of {data_avg:.3f} inches of precipitation per {time_type}.')
+    print('\n')        # Blank line so program output looks less clunky
     
     # Pause program for 1 second
     time.sleep(1)

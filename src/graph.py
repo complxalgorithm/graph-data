@@ -48,9 +48,6 @@ def choice():
 
 # generate() function - creates graph then displays it in default browser
 def generate(times, data, graph, trend, typ):
-    # Initialize origin_zero variable to use in determining where to start graph origin
-    origin_zero = True
-    
     # Capitalize time type for use as x-axis label
     typ = typ.capitalize()
     
