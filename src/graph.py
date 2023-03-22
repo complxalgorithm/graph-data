@@ -108,7 +108,7 @@ def generate(times, data, graph, trend, typ):
     fig.update_yaxes(tick0=0, dtick=0.5, showline=True, linewidth=1, linecolor='black')
     
     # Determine origin of the graph
-    if min(data) < 2.5:
+    if min(data) < 2:
         # Force graph's origin to start at (1, 0) if the lowest data entry is less than 2.5
         # Set max x-axis range to last month
         # Set max y-axis range to one more than largest precipitation value (removing the decimal)
