@@ -10,9 +10,6 @@ import os
 import sys
 import inspect
 
-# Determine current path
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-
 # Add src directory to end of path
 sys.path.insert(1, os.path.join(sys.path[0], 'src'))
 
