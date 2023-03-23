@@ -8,7 +8,7 @@
 # Import libraries needed to point to src directory
 import os
 import sys
-import inspect
+#import inspect
 
 # Add src directory to end of path
 sys.path.insert(1, os.path.join(sys.path[0], 'src'))
