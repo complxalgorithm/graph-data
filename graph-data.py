@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Name: graph-data.py
 # Author: Stephen C. Sanders <https://stephensanders.me>
 # License: MIT

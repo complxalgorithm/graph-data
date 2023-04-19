@@ -41,7 +41,7 @@ def m():
     # Output stats
     print(f'{data_sum:.3f} inches of precipitation fell over the course of {time_num} {time_type}s.')
     print(f'There was an average of {data_avg:.3f} inches of precipitation per {time_type}.')
-    print('\n')        # Blank line so program output looks less clunky
+    print('\n')         # Blank line so program output looks less clunky
     
     # Pause program for 1 second
     time.sleep(1)

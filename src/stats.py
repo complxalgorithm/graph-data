@@ -4,18 +4,18 @@
 # Description: Includes stats related functions: total() and avg()
 
 # total() function - calculates total precipitation
-def total(precip):
+def total(data):
     # Initialize tot variable to add sum to
     tot = 0
     
-    # Add up total of precipitation
-    for key, val in precip.items():
+    # Add up total of all data
+    for key, val in data.items():
         val = float(val)
         tot += val
     
     # Return total to m() function
     return tot
 
-# avg() function - calculates average monthly precipitation
+# avg() function - calculates average
 def avg(total, time):
     return (total / time)

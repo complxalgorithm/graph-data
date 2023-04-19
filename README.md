@@ -44,6 +44,7 @@ python3 graph-data.py
 - [ ] Give user option to save graph from command line into any directory
 - [ ] Give user option to display graph as .png, .jpeg, .svg, or .pdf
 - [ ] Add support for data from .csv or .xls files
+- [ ] Add support for data from feature classes and shapefiles (ArcGIS, QGIS)
 - [ ] Add support for data that is stored in external databases (e.g. MySQL, PostgreSQL)
 - [ ] Add support for the generation of multivariate graphs
 
